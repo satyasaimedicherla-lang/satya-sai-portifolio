@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satya Sai Medicherla | Portfolio</title>
+    <title>Satya Sai Medicherla | Software Engineer & Security Specialist</title>
     <meta name="description" content="Portfolio of Satya Sai Medicherla - Software Engineer & Security Specialist">
     
     <!-- Tailwind CSS -->
@@ -12,7 +12,7 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Tailwind Configuration for Custom Colors/Fonts -->
+    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -32,33 +32,24 @@
     </script>
     
     <style>
-        /* Custom scrollbar for Webkit */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #000;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #333;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
         
-        /* Gradient Animation */
         @keyframes blob {
             0% { transform: translate(0px, 0px) scale(1); }
             33% { transform: translate(30px, -50px) scale(1.1); }
             66% { transform: translate(-20px, 20px) scale(0.9); }
             100% { transform: translate(0px, 0px) scale(1); }
         }
-        .animate-blob {
-            animation: blob 7s infinite;
-        }
-        .animation-delay-2000 {
-            animation-delay: 2s;
+        .animate-blob { animation: blob 7s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+
+        .glass-card {
+            background: rgba(24, 24, 27, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
     </style>
 </head>
@@ -71,40 +62,38 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full top-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
+    <nav class="fixed w-full top-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
                     <span class="font-bold text-xl tracking-tight text-white">Satya Medicherla</span>
                 </div>
                 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors duration-200">About</a>
-                    <a href="#skills" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors duration-200">Skills</a>
-                    <a href="#experience" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors duration-200">Experience</a>
-                    <a href="#certifications" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors duration-200">Certifications</a>
-                    <a href="#contact" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors duration-200">Contact</a>
+                    <a href="#about" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">About</a>
+                    <a href="#skills" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Skills</a>
+                    <a href="#projects" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Projects</a>
+                    <a href="#experience" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Experience</a>
+                    <a href="#certifications" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Certifications</a>
+                    <a href="#contact" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Contact</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="menu-btn" class="text-zinc-400 hover:text-white p-2 focus:outline-none">
+                    <button id="menu-btn" class="text-zinc-400 hover:text-white p-2">
                         <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-zinc-900/95 backdrop-blur-xl border-t border-white/10 absolute w-full">
             <div class="px-4 py-4 space-y-2">
-                <a href="#about" class="block w-full text-left py-3 text-lg font-medium text-zinc-400 hover:text-white mobile-link">About</a>
-                <a href="#skills" class="block w-full text-left py-3 text-lg font-medium text-zinc-400 hover:text-white mobile-link">Skills</a>
-                <a href="#experience" class="block w-full text-left py-3 text-lg font-medium text-zinc-400 hover:text-white mobile-link">Experience</a>
-                <a href="#certifications" class="block w-full text-left py-3 text-lg font-medium text-zinc-400 hover:text-white mobile-link">Certifications</a>
-                <a href="#contact" class="block w-full text-left py-3 text-lg font-medium text-zinc-400 hover:text-white mobile-link">Contact</a>
+                <a href="#about" class="block py-3 text-lg font-medium text-zinc-400 mobile-link">About</a>
+                <a href="#skills" class="block py-3 text-lg font-medium text-zinc-400 mobile-link">Skills</a>
+                <a href="#projects" class="block py-3 text-lg font-medium text-zinc-400 mobile-link">Projects</a>
+                <a href="#experience" class="block py-3 text-lg font-medium text-zinc-400 mobile-link">Experience</a>
+                <a href="#certifications" class="block py-3 text-lg font-medium text-zinc-400 mobile-link">Certifications</a>
+                <a href="#contact" class="block py-3 text-lg font-medium text-zinc-400 mobile-link">Contact</a>
             </div>
         </div>
     </nav>
@@ -112,38 +101,32 @@
     <!-- Hero Section -->
     <section id="about" class="relative z-10 pt-40 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="flex flex-col items-center text-center">
-            <!-- Status Pill -->
-            <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-zinc-900 border border-white/10 text-zinc-300 text-xs font-medium mb-8 backdrop-blur-md hover:bg-zinc-800 transition-colors cursor-default">
+            <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-zinc-900 border border-white/10 text-zinc-300 text-xs font-medium mb-8 backdrop-blur-md">
                 <span class="flex h-1.5 w-1.5 rounded-full bg-emerald-500 mr-2 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></span>
                 Available for Hire
             </div>
             
-            <!-- Headline -->
             <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-zinc-500 mb-8 max-w-5xl">
                 Satya Sai Medicherla
             </h1>
             
-            <!-- Subheadline -->
             <p class="text-xl sm:text-2xl text-zinc-400 leading-relaxed max-w-2xl mb-12 font-light">
                 Software Engineer & Security Specialist. I build secure, scalable digital architectures, bridging the gap between complex code and robust security protocols.
             </p>
 
-            <!-- CTA Buttons -->
             <div class="flex flex-wrap justify-center gap-4 mb-20">
-                <a href="mailto:SATYASAI33M@GMAIL.COM" class="px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-zinc-200 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] active:scale-95">
+                <a href="mailto:SATYASAI33M@GMAIL.COM" class="px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-zinc-200 transition-all active:scale-95">
                     Get in Touch
                 </a>
-                <a href="https://github.com/satyasaimedicherla-lang/satya-sai-portifolio/blob/978a7e9b1d485ad5d7b43d7ea818363d499995cd/SATYA%20SAI%20RESUME%20(1).pdf.pdf" target="_blank" class="px-8 py-4 rounded-full bg-zinc-900/50 border border-white/10 text-white font-semibold hover:bg-zinc-800 transition-all duration-300 backdrop-blur-md flex items-center gap-2 active:scale-95 group">
+                <a href="#" class="px-8 py-4 rounded-full bg-zinc-900/50 border border-white/10 text-white font-semibold hover:bg-zinc-800 transition-all backdrop-blur-md flex items-center gap-2 active:scale-95 group">
                     <i data-lucide="download" class="w-4 h-4 group-hover:translate-y-0.5 transition-transform"></i>
                     Resume
                 </a>
             </div>
 
-            <!-- Bento Grid Competencies -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-5xl">
-                <!-- Card 1 -->
-                <div class="group p-6 bg-zinc-900/40 border border-white/5 rounded-3xl backdrop-blur-sm hover:bg-zinc-800/50 transition-all duration-500">
-                    <div class="mb-4 p-3 bg-white/5 w-fit rounded-2xl text-zinc-300 group-hover:text-white group-hover:scale-110 transition-all duration-500">
+                <div class="group p-6 glass-card rounded-3xl hover:bg-zinc-800/50 transition-all duration-500">
+                    <div class="mb-4 p-3 bg-white/5 w-fit rounded-2xl text-zinc-300 group-hover:text-white group-hover:scale-110 transition-all">
                         <i data-lucide="code-2" class="w-6 h-6"></i>
                     </div>
                     <div class="text-left">
@@ -151,9 +134,8 @@
                         <p class="text-sm text-zinc-500">Python, C++</p>
                     </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="group p-6 bg-zinc-900/40 border border-white/5 rounded-3xl backdrop-blur-sm hover:bg-zinc-800/50 transition-all duration-500">
-                    <div class="mb-4 p-3 bg-white/5 w-fit rounded-2xl text-zinc-300 group-hover:text-white group-hover:scale-110 transition-all duration-500">
+                <div class="group p-6 glass-card rounded-3xl hover:bg-zinc-800/50 transition-all duration-500">
+                    <div class="mb-4 p-3 bg-white/5 w-fit rounded-2xl text-zinc-300 group-hover:text-white group-hover:scale-110 transition-all">
                         <i data-lucide="shield-check" class="w-6 h-6"></i>
                     </div>
                     <div class="text-left">
@@ -161,9 +143,8 @@
                         <p class="text-sm text-zinc-500">Network & Cyber</p>
                     </div>
                 </div>
-                <!-- Card 3 -->
-                <div class="group p-6 bg-zinc-900/40 border border-white/5 rounded-3xl backdrop-blur-sm hover:bg-zinc-800/50 transition-all duration-500">
-                    <div class="mb-4 p-3 bg-white/5 w-fit rounded-2xl text-zinc-300 group-hover:text-white group-hover:scale-110 transition-all duration-500">
+                <div class="group p-6 glass-card rounded-3xl hover:bg-zinc-800/50 transition-all duration-500">
+                    <div class="mb-4 p-3 bg-white/5 w-fit rounded-2xl text-zinc-300 group-hover:text-white group-hover:scale-110 transition-all">
                         <i data-lucide="terminal" class="w-6 h-6"></i>
                     </div>
                     <div class="text-left">
@@ -171,9 +152,8 @@
                         <p class="text-sm text-zinc-500">DSA Mastery</p>
                     </div>
                 </div>
-                <!-- Card 4 -->
-                <div class="group p-6 bg-zinc-900/40 border border-white/5 rounded-3xl backdrop-blur-sm hover:bg-zinc-800/50 transition-all duration-500">
-                    <div class="mb-4 p-3 bg-white/5 w-fit rounded-2xl text-zinc-300 group-hover:text-white group-hover:scale-110 transition-all duration-500">
+                <div class="group p-6 glass-card rounded-3xl hover:bg-zinc-800/50 transition-all duration-500">
+                    <div class="mb-4 p-3 bg-white/5 w-fit rounded-2xl text-zinc-300 group-hover:text-white group-hover:scale-110 transition-all">
                         <i data-lucide="database" class="w-6 h-6"></i>
                     </div>
                     <div class="text-left">
@@ -187,68 +167,127 @@
 
     <!-- Skills Section -->
     <section id="skills" class="relative z-10 py-24 bg-gradient-to-b from-black to-zinc-900/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-5xl font-bold text-white mb-12 tracking-tight">Technical Arsenal</h2>
-            
             <div class="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-                <span class="px-6 py-3 rounded-full bg-zinc-900/80 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white hover:bg-zinc-800 transition-all cursor-default backdrop-blur-md">Python</span>
-                <span class="px-6 py-3 rounded-full bg-zinc-900/80 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white hover:bg-zinc-800 transition-all cursor-default backdrop-blur-md">C++</span>
-                <span class="px-6 py-3 rounded-full bg-zinc-900/80 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white hover:bg-zinc-800 transition-all cursor-default backdrop-blur-md">Linux Administration</span>
-                <span class="px-6 py-3 rounded-full bg-zinc-900/80 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white hover:bg-zinc-800 transition-all cursor-default backdrop-blur-md">Network Security</span>
-                <span class="px-6 py-3 rounded-full bg-zinc-900/80 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white hover:bg-zinc-800 transition-all cursor-default backdrop-blur-md">Cyber Security</span>
-                <span class="px-6 py-3 rounded-full bg-zinc-900/80 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white hover:bg-zinc-800 transition-all cursor-default backdrop-blur-md">Data Structures</span>
-                <span class="px-6 py-3 rounded-full bg-zinc-900/80 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white hover:bg-zinc-800 transition-all cursor-default backdrop-blur-md">Algorithms</span>
-                <span class="px-6 py-3 rounded-full bg-zinc-900/80 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white hover:bg-zinc-800 transition-all cursor-default backdrop-blur-md">Dynamic Programming</span>
-                <span class="px-6 py-3 rounded-full bg-zinc-900/80 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white hover:bg-zinc-800 transition-all cursor-default backdrop-blur-md">Troubleshooting</span>
-                <span class="px-6 py-3 rounded-full bg-zinc-900/80 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white hover:bg-zinc-800 transition-all cursor-default backdrop-blur-md">Design (Canva)</span>
+                <span class="px-6 py-3 rounded-full bg-zinc-900 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white transition-all cursor-default">Python</span>
+                <span class="px-6 py-3 rounded-full bg-zinc-900 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white transition-all cursor-default">C++</span>
+                <span class="px-6 py-3 rounded-full bg-zinc-900 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white transition-all cursor-default">Linux Administration</span>
+                <span class="px-6 py-3 rounded-full bg-zinc-900 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white transition-all cursor-default">Network Security</span>
+                <span class="px-6 py-3 rounded-full bg-zinc-900 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white transition-all cursor-default">Cyber Security</span>
+                <span class="px-6 py-3 rounded-full bg-zinc-900 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white transition-all cursor-default">Data Structures</span>
+                <span class="px-6 py-3 rounded-full bg-zinc-900 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white transition-all cursor-default">Algorithms</span>
+                <span class="px-6 py-3 rounded-full bg-zinc-900 border border-white/10 text-zinc-300 font-medium hover:border-white/30 hover:text-white transition-all cursor-default">Troubleshooting</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (New Content Integrated) -->
+    <section id="projects" class="relative z-10 py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">Featured Projects</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-white to-zinc-800 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Project: Credit Card Fraud Detection -->
+                <div class="group relative overflow-hidden glass-card rounded-3xl p-8 hover:bg-zinc-800/50 transition-all duration-500">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-white/5 rounded-2xl text-zinc-300 group-hover:text-white transition-colors">
+                            <i data-lucide="shield-alert" class="w-8 h-8"></i>
+                        </div>
+                        <div class="flex gap-2">
+                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-zinc-400">Machine Learning</span>
+                            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-zinc-400">Cybersecurity</span>
+                        </div>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white mb-4">Credit Card Fraud Detection</h3>
+                    <p class="text-zinc-400 leading-relaxed mb-6">
+                        Developed a binary classification model to detect fraudulent transactions using the Kaggle European Cardholder dataset. Addressed extreme class imbalance (0.17% fraud) through the "Bake-Off" competition approach.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3 text-sm text-zinc-300">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i>
+                            <span>Applied <strong>SMOTE</strong> for synthetic minority over-sampling</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-zinc-300">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i>
+                            <span>Evaluated using <strong>PR-AUC</strong> and <strong>F1-Score</strong> metrics</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-zinc-300">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i>
+                            <span>Comparison between Logistic Regression & Random Forest</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="text-xs font-medium px-3 py-1 bg-zinc-800 text-zinc-300 rounded-md">Python</span>
+                        <span class="text-xs font-medium px-3 py-1 bg-zinc-800 text-zinc-300 rounded-md">Scikit-Learn</span>
+                        <span class="text-xs font-medium px-3 py-1 bg-zinc-800 text-zinc-300 rounded-md">PCA</span>
+                        <span class="text-xs font-medium px-3 py-1 bg-zinc-800 text-zinc-300 rounded-md">RobustScaler</span>
+                    </div>
+
+                    <div class="flex gap-6">
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-white group-hover:gap-3 gap-2 transition-all">
+                            VIEW PROJECT <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Future Project Placeholder -->
+                <div class="group border border-dashed border-white/10 rounded-3xl p-8 flex flex-col items-center justify-center text-center hover:border-white/20 transition-all min-h-[400px]">
+                    <div class="p-4 bg-white/5 rounded-full mb-4">
+                        <i data-lucide="lock" class="w-6 h-6 text-zinc-500"></i>
+                    </div>
+                    <p class="text-zinc-500 font-medium tracking-wide">Next Security Research Project <br> Incoming</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience" class="relative z-10 py-24 bg-zinc-950">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto px-4">
             <div class="mb-16">
                 <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">Experience</h2>
                 <div class="h-1 w-20 bg-gradient-to-r from-white to-zinc-800 rounded-full"></div>
             </div>
 
-            <div class="space-y-8">
-                <!-- Exp Item 1 -->
-                <div class="relative pl-8 border-l border-zinc-800 hover:border-zinc-600 transition-colors duration-300">
+            <div class="space-y-12">
+                <div class="relative pl-8 border-l border-zinc-800">
                     <div class="absolute top-0 left-[-5px] w-2.5 h-2.5 rounded-full bg-white ring-4 ring-black"></div>
-                    
-                    <div class="bg-zinc-900/30 border border-white/5 rounded-3xl p-8 hover:bg-zinc-900/50 transition-all duration-300">
+                    <div class="glass-card rounded-3xl p-8 hover:bg-zinc-900/50 transition-all">
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                             <div>
                                 <h3 class="text-xl font-bold text-white mb-1">Cyber Security Intern</h3>
                                 <p class="text-zinc-400 font-medium">Plasmid Innovation Ltd</p>
                             </div>
-                            <span class="mt-2 sm:mt-0 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-zinc-400 w-fit">
+                            <span class="mt-2 sm:mt-0 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-zinc-400">
                                 Feb 2025 - Apr 2025
                             </span>
                         </div>
-                        <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">
-                            Completed industrial training focused on Cyber Security based applications. Delivered quality work on assigned industrial projects, receiving a strong letter of recommendation for excellent performance and diligence.
+                        <p class="text-zinc-400 leading-relaxed">
+                            Completed industrial training focused on Cyber Security applications. Delivered quality work on industrial projects and received a strong letter of recommendation for excellence and diligence.
                         </p>
                     </div>
                 </div>
 
-                <!-- Exp Item 2 -->
-                <div class="relative pl-8 border-l border-zinc-800 hover:border-zinc-600 transition-colors duration-300">
+                <div class="relative pl-8 border-l border-zinc-800">
                     <div class="absolute top-0 left-[-5px] w-2.5 h-2.5 rounded-full bg-white ring-4 ring-black"></div>
-                    
-                    <div class="bg-zinc-900/30 border border-white/5 rounded-3xl p-8 hover:bg-zinc-900/50 transition-all duration-300">
+                    <div class="glass-card rounded-3xl p-8 hover:bg-zinc-900/50 transition-all">
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                             <div>
                                 <h3 class="text-xl font-bold text-white mb-1">Brochure Designing Project</h3>
                                 <p class="text-zinc-400 font-medium">Infosys Springboard</p>
                             </div>
-                            <span class="mt-2 sm:mt-0 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-zinc-400 w-fit">
+                            <span class="mt-2 sm:mt-0 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-zinc-400">
                                 Feb 2025
                             </span>
                         </div>
-                        <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">
+                        <p class="text-zinc-400 leading-relaxed">
                             Successfully completed a design project focusing on visual communication and layout strategies using Canva.
                         </p>
                     </div>
@@ -259,7 +298,7 @@
 
     <!-- Certifications Section -->
     <section id="certifications" class="relative z-10 py-24 bg-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
                 <div>
                     <h2 class="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">Certifications</h2>
@@ -268,147 +307,68 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Cert: Standards & Frameworks -->
-                <div class="group bg-zinc-900/20 border border-white/5 rounded-3xl p-8 hover:bg-zinc-900/40 hover:border-white/20 transition-all duration-300 backdrop-blur-sm">
+                <!-- Quick Heal Certs -->
+                <div class="group glass-card rounded-3xl p-8 hover:border-white/20 transition-all">
                     <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-zinc-800/50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                            <i data-lucide="file-check" class="text-white w-5 h-5"></i>
+                        <div class="p-3 bg-zinc-800/50 rounded-2xl">
+                            <i data-lucide="shield" class="text-white w-5 h-5"></i>
                         </div>
-                        <span class="text-xs font-semibold text-zinc-500 border border-zinc-800 px-3 py-1 rounded-full">Feb 2026</span>
+                        <span class="text-xs font-semibold text-zinc-500 border border-zinc-800 px-3 py-1 rounded-full">2026</span>
                     </div>
-                    <h3 class="font-bold text-lg text-white mb-2 leading-tight">Introduction to Standards & Frameworks</h3>
+                    <h3 class="font-bold text-lg text-white mb-2">Information Security</h3>
                     <p class="text-sm font-medium text-zinc-400 mb-4">Quick Heal Academy</p>
-                    <p class="text-sm text-zinc-500 leading-relaxed">Understanding of cybersecurity standards, compliance frameworks, and key technology concepts.</p>
+                    <p class="text-sm text-zinc-500">Principles of information security, data protection, and threat mitigation.</p>
                 </div>
 
-                <!-- Cert: Information Security -->
-                <div class="group bg-zinc-900/20 border border-white/5 rounded-3xl p-8 hover:bg-zinc-900/40 hover:border-white/20 transition-all duration-300 backdrop-blur-sm">
+                <div class="group glass-card rounded-3xl p-8 hover:border-white/20 transition-all">
                     <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-zinc-800/50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                            <i data-lucide="lock" class="text-white w-5 h-5"></i>
-                        </div>
-                        <span class="text-xs font-semibold text-zinc-500 border border-zinc-800 px-3 py-1 rounded-full">Feb 2026</span>
-                    </div>
-                    <h3 class="font-bold text-lg text-white mb-2 leading-tight">Introduction to Information Security</h3>
-                    <p class="text-sm font-medium text-zinc-400 mb-4">Quick Heal Academy</p>
-                    <p class="text-sm text-zinc-500 leading-relaxed">Foundational principles of information security, data protection, and threat mitigation.</p>
-                </div>
-
-                <!-- Cert: Linux -->
-                <div class="group bg-zinc-900/20 border border-white/5 rounded-3xl p-8 hover:bg-zinc-900/40 hover:border-white/20 transition-all duration-300 backdrop-blur-sm">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-zinc-800/50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                        <div class="p-3 bg-zinc-800/50 rounded-2xl">
                             <i data-lucide="terminal" class="text-white w-5 h-5"></i>
                         </div>
-                        <span class="text-xs font-semibold text-zinc-500 border border-zinc-800 px-3 py-1 rounded-full">Feb 2026</span>
+                        <span class="text-xs font-semibold text-zinc-500 border border-zinc-800 px-3 py-1 rounded-full">2026</span>
                     </div>
-                    <h3 class="font-bold text-lg text-white mb-2 leading-tight">Linux Proficiency</h3>
+                    <h3 class="font-bold text-lg text-white mb-2">Linux Proficiency</h3>
                     <p class="text-sm font-medium text-zinc-400 mb-4">Quick Heal Academy</p>
-                    <p class="text-sm text-zinc-500 leading-relaxed">Operating system fundamentals, command-line proficiency, and system administration basics.</p>
+                    <p class="text-sm text-zinc-500">Operating system fundamentals, command-line proficiency, and administration.</p>
                 </div>
 
-                <!-- Cert 1 -->
-                <div class="group bg-zinc-900/20 border border-white/5 rounded-3xl p-8 hover:bg-zinc-900/40 hover:border-white/20 transition-all duration-300 backdrop-blur-sm">
+                <!-- Cisco -->
+                <div class="group glass-card rounded-3xl p-8 hover:border-white/20 transition-all">
                     <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-zinc-800/50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                            <i data-lucide="shield-check" class="text-white w-5 h-5"></i>
+                        <div class="p-3 bg-zinc-800/50 rounded-2xl">
+                            <i data-lucide="network" class="text-white w-5 h-5"></i>
                         </div>
-                        <span class="text-xs font-semibold text-zinc-500 border border-zinc-800 px-3 py-1 rounded-full">Nov 2025</span>
+                        <span class="text-xs font-semibold text-zinc-500 border border-zinc-800 px-3 py-1 rounded-full">2025</span>
                     </div>
-                    <h3 class="font-bold text-lg text-white mb-2 leading-tight">Network Support and Security</h3>
-                    <p class="text-sm font-medium text-zinc-400 mb-4">Cisco Networking Academy</p>
-                    <p class="text-sm text-zinc-500 leading-relaxed">Troubleshooting methodologies, endpoint security, and secure access configuration.</p>
+                    <h3 class="font-bold text-lg text-white mb-2">Network Support & Security</h3>
+                    <p class="text-sm font-medium text-zinc-400 mb-4">Cisco Academy</p>
+                    <p class="text-sm text-zinc-500">Troubleshooting, endpoint security, and secure access configuration.</p>
                 </div>
 
-                <!-- Cert 2 -->
-                <div class="group bg-zinc-900/20 border border-white/5 rounded-3xl p-8 hover:bg-zinc-900/40 hover:border-white/20 transition-all duration-300 backdrop-blur-sm">
+                <!-- LinkedIn Learning -->
+                <div class="group glass-card rounded-3xl p-8 hover:border-white/20 transition-all">
                     <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-zinc-800/50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                            <i data-lucide="code-2" class="text-white w-5 h-5"></i>
-                        </div>
-                        <span class="text-xs font-semibold text-zinc-500 border border-zinc-800 px-3 py-1 rounded-full">Nov 2025</span>
-                    </div>
-                    <h3 class="font-bold text-lg text-white mb-2 leading-tight">Python Data Structures & Algorithms</h3>
-                    <p class="text-sm font-medium text-zinc-400 mb-4">LinkedIn Learning</p>
-                    <p class="text-sm text-zinc-500 leading-relaxed">Advanced data structures and algorithmic efficiency optimization.</p>
-                </div>
-
-                <!-- Cert 3 -->
-                <div class="group bg-zinc-900/20 border border-white/5 rounded-3xl p-8 hover:bg-zinc-900/40 hover:border-white/20 transition-all duration-300 backdrop-blur-sm">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-zinc-800/50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                            <i data-lucide="terminal" class="text-white w-5 h-5"></i>
-                        </div>
-                        <span class="text-xs font-semibold text-zinc-500 border border-zinc-800 px-3 py-1 rounded-full">Nov 2025</span>
-                    </div>
-                    <h3 class="font-bold text-lg text-white mb-2 leading-tight">Problem-Solving Techniques</h3>
-                    <p class="text-sm font-medium text-zinc-400 mb-4">LinkedIn Learning</p>
-                    <p class="text-sm text-zinc-500 leading-relaxed">Critical thinking strategies for complex technical challenges.</p>
-                </div>
-
-                <!-- Cert 4 -->
-                <div class="group bg-zinc-900/20 border border-white/5 rounded-3xl p-8 hover:bg-zinc-900/40 hover:border-white/20 transition-all duration-300 backdrop-blur-sm">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-zinc-800/50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                            <i data-lucide="cpu" class="text-white w-5 h-5"></i>
-                        </div>
-                        <span class="text-xs font-semibold text-zinc-500 border border-zinc-800 px-3 py-1 rounded-full">Nov 2025</span>
-                    </div>
-                    <h3 class="font-bold text-lg text-white mb-2 leading-tight">Dynamic Programming Fundamentals</h3>
-                    <p class="text-sm font-medium text-zinc-400 mb-4">LinkedIn Learning</p>
-                    <p class="text-sm text-zinc-500 leading-relaxed">Optimizing recursion and solving complex computational problems.</p>
-                </div>
-
-                <!-- Cert 5 -->
-                <div class="group bg-zinc-900/20 border border-white/5 rounded-3xl p-8 hover:bg-zinc-900/40 hover:border-white/20 transition-all duration-300 backdrop-blur-sm">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-zinc-800/50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                            <i data-lucide="database" class="text-white w-5 h-5"></i>
-                        </div>
-                        <span class="text-xs font-semibold text-zinc-500 border border-zinc-800 px-3 py-1 rounded-full">Nov 2025</span>
-                    </div>
-                    <h3 class="font-bold text-lg text-white mb-2 leading-tight">Data Management Essentials</h3>
-                    <p class="text-sm font-medium text-zinc-400 mb-4">LinkedIn Learning</p>
-                    <p class="text-sm text-zinc-500 leading-relaxed">Best practices in data handling, storage systems, and integrity.</p>
-                </div>
-
-                <!-- Cert 6 -->
-                <div class="group bg-zinc-900/20 border border-white/5 rounded-3xl p-8 hover:bg-zinc-900/40 hover:border-white/20 transition-all duration-300 backdrop-blur-sm">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-zinc-800/50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                            <i data-lucide="code" class="text-white w-5 h-5"></i>
-                        </div>
-                        <span class="text-xs font-semibold text-zinc-500 border border-zinc-800 px-3 py-1 rounded-full">Apr 2025</span>
-                    </div>
-                    <h3 class="font-bold text-lg text-white mb-2 leading-tight">Programming Using C++</h3>
-                    <p class="text-sm font-medium text-zinc-400 mb-4">Infosys Springboard</p>
-                    <p class="text-sm text-zinc-500 leading-relaxed">OOP concepts, memory management, and application development.</p>
-                </div>
-                 
-                <!-- Cert 7 -->
-                <div class="group bg-zinc-900/20 border border-white/5 rounded-3xl p-8 hover:bg-zinc-900/40 hover:border-white/20 transition-all duration-300 backdrop-blur-sm">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-zinc-800/50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                        <div class="p-3 bg-zinc-800/50 rounded-2xl">
                             <i data-lucide="layers" class="text-white w-5 h-5"></i>
                         </div>
-                        <span class="text-xs font-semibold text-zinc-500 border border-zinc-800 px-3 py-1 rounded-full">Apr 2025</span>
+                        <span class="text-xs font-semibold text-zinc-500 border border-zinc-800 px-3 py-1 rounded-full">2025</span>
                     </div>
-                    <h3 class="font-bold text-lg text-white mb-2 leading-tight">Data Structures and Algorithms</h3>
-                    <p class="text-sm font-medium text-zinc-400 mb-4">Infosys Springboard</p>
-                    <p class="text-sm text-zinc-500 leading-relaxed">Core foundation in CSA principles and logic.</p>
+                    <h3 class="font-bold text-lg text-white mb-2">Data Structures & Algorithms</h3>
+                    <p class="text-sm font-medium text-zinc-400 mb-4">LinkedIn Learning</p>
+                    <p class="text-sm text-zinc-500">Mastery in efficient data organization and computational optimization.</p>
                 </div>
 
-                <!-- Cert 8 -->
-                <div class="group bg-zinc-900/20 border border-white/5 rounded-3xl p-8 hover:bg-zinc-900/40 hover:border-white/20 transition-all duration-300 backdrop-blur-sm">
+                <!-- Infosys Springboard -->
+                <div class="group glass-card rounded-3xl p-8 hover:border-white/20 transition-all">
                     <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-zinc-800/50 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                            <i data-lucide="terminal" class="text-white w-5 h-5"></i>
+                        <div class="p-3 bg-zinc-800/50 rounded-2xl">
+                            <i data-lucide="code" class="text-white w-5 h-5"></i>
                         </div>
-                        <span class="text-xs font-semibold text-zinc-500 border border-zinc-800 px-3 py-1 rounded-full">May 2025</span>
+                        <span class="text-xs font-semibold text-zinc-500 border border-zinc-800 px-3 py-1 rounded-full">2025</span>
                     </div>
-                    <h3 class="font-bold text-lg text-white mb-2 leading-tight">Python Fundamentals</h3>
+                    <h3 class="font-bold text-lg text-white mb-2">Programming Using C++</h3>
                     <p class="text-sm font-medium text-zinc-400 mb-4">Infosys Springboard</p>
-                    <p class="text-sm text-zinc-500 leading-relaxed">Comprehensive Python scripting and software development basics.</p>
+                    <p class="text-sm text-zinc-500">OOP concepts, memory management, and robust application logic.</p>
                 </div>
             </div>
         </div>
@@ -418,11 +378,11 @@
     <section id="contact" class="relative z-10 py-32 bg-gradient-to-b from-black to-zinc-900">
         <div class="max-w-3xl mx-auto px-4 text-center">
             <h2 class="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tighter">Let's Connect</h2>
-            <p class="text-zinc-400 mb-12 text-lg md:text-xl font-light max-w-2xl mx-auto">
-                I am currently open to opportunities in Network Engineering and Software Development.
+            <p class="text-zinc-400 mb-12 text-lg md:text-xl font-light">
+                Currently open to opportunities in Cyber Security, Network Engineering, and Software Development.
             </p>
             
-            <a href="mailto:SATYASAI33M@GMAIL.COM" class="inline-flex items-center px-10 py-5 rounded-full bg-white text-black font-bold text-lg hover:bg-zinc-200 transition-all duration-300 active:scale-95 shadow-xl shadow-white/5">
+            <a href="mailto:SATYASAI33M@GMAIL.COM" class="inline-flex items-center px-10 py-5 rounded-full bg-white text-black font-bold text-lg hover:bg-zinc-200 transition-all active:scale-95 shadow-xl shadow-white/5">
                 <i data-lucide="mail" class="mr-3 w-5 h-5"></i>
                 Say Hello
             </a>
@@ -430,10 +390,10 @@
             <div class="mt-24 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-zinc-500 text-sm">
                 <p>&copy; 2026 Satya Sai Medicherla.</p>
                 <div class="flex gap-8 mt-6 md:mt-0">
-                    <a href="https://www.linkedin.com/in/satya-sai-medicherla-a23601381" class="hover:text-white transition-colors duration-300 flex items-center gap-2">
+                    <a href="https://www.linkedin.com/in/satya-sai-medicherla-a23601381" class="hover:text-white transition-colors flex items-center gap-2">
                         <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
                     </a>
-                    <a href="https://github.com/satyasaimedicherla-lang" class="hover:text-white transition-colors duration-300 flex items-center gap-2">
+                    <a href="https://github.com/satyasaimedicherla-lang" class="hover:text-white transition-colors flex items-center gap-2">
                         <i data-lucide="github" class="w-4 h-4"></i> GitHub
                     </a>
                 </div>
@@ -441,7 +401,6 @@
         </div>
     </section>
 
-    <!-- Scripts -->
     <script>
         // Initialize Icons
         lucide.createIcons();
@@ -464,7 +423,6 @@
             lucide.createIcons();
         });
 
-        // Close menu when a link is clicked
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 isMenuOpen = false;
